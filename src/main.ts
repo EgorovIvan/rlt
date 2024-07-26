@@ -1,4 +1,11 @@
+import './assets/main.css'
+import './fonts/SFPro.css'
 import { createApp } from 'vue'
 import App from './App.vue'
+import {createPinia} from "pinia";
 
-createApp(App).mount('#app')
+
+const pinia = createPinia()
+const app = createApp(App)
+    .use(pinia)
+    .mount("#app")
